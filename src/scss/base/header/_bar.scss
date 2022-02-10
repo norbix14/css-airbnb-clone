@@ -1,0 +1,33 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.bar {
+  &__logo {
+    width: 20rem;
+    @include mx.media-tablet {
+      width: 10rem;
+    }
+  }
+  &__nav {
+    display: none;
+    @include mx.media-tablet {
+      @include mx.flex($gap: 4rem);
+    }
+  }
+  &__login {
+    display: none;
+    @include mx.media-tablet {
+      display: block;
+    }
+  }
+  &__link {
+    transition: color 0.2s ease;
+    color: var.$color_white;
+    &:hover {
+      color: var.$color_primary;
+    }
+  }
+  @include mx.media-tablet {
+    @include mx.flex();
+  }
+}

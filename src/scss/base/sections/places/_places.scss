@@ -1,0 +1,41 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.places {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 30rem);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    @include mx.scroll-x;
+    @include mx.media-tablet {
+      padding-bottom: 0;
+      overflow: hidden;
+      @include mx.grid(2, 2rem);
+    }
+    @include mx.media-desktop {
+      @include mx.grid(4, 2rem);
+    }
+  }
+}
+
+.place {
+  position: relative;
+  &__img {
+    border-radius: 1rem;
+  }
+  &__name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var.$color_secondary;
+    @include mx.media-tablet {
+      position: inherit;
+      bottom: unset;
+      left: unset;
+      margin-top: 1rem;
+    }
+  }
+}

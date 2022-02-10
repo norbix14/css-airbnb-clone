@@ -1,0 +1,67 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.notwebp.notavif .host {
+  @include mx.bg-gradient-host(to bottom, 0%, 50%, 50%, 'anfitrion.jpg');
+  @include mx.media-tablet {
+    @include mx.bg-gradient-host(to right, 0%, 45%, 55%, 'anfitrion.jpg');
+  }
+}
+
+.webp .host {
+  @include mx.bg-gradient-host(to bottom, 0%, 50%, 50%, 'anfitrion.webp');
+  @include mx.media-tablet {
+    @include mx.bg-gradient-host(to right, 0%, 45%, 55%, 'anfitrion.webp');
+  }
+}
+
+.avif .host {
+  @include mx.bg-gradient-host(to bottom, 0%, 50%, 50%, 'anfitrion.avif');
+  @include mx.media-tablet {
+    @include mx.bg-gradient-host(to right, 0%, 45%, 55%, 'anfitrion.avif');
+  }
+}
+
+.host {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 15rem;
+  padding: 5rem;
+  background-repeat: no-repeat;
+  background-size: 100%, 60rem;
+  background-position: center, center bottom;
+  margin-top: 4rem;
+  color: var.$color_white;
+  &__content {
+    @include mx.media-tablet {
+      max-width: 45%;
+    }
+  }
+  &__text {
+    color: var.$color_white;
+  }
+  &__link {
+    @include mx.button(var.$color_white, var.$color_black);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: var.$color_gray_light;
+    }
+  }
+  @include mx.media-tel {
+    background-size: 100%, 72rem;
+    background-position: center, center 200%;
+  }
+  @include mx.media-tablet {
+    padding: 15rem 5rem;
+    grid-template-rows: unset;
+    background-size: 100%, auto;
+    background-position: center, 50% 30%;
+  }
+  @include mx.media-desktop {
+    background-position: center, right center;
+  }
+}

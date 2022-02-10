@@ -1,0 +1,18 @@
+@use 'base/variables' as var;
+
+@mixin bg-image($url, $degradate) {
+  background-image: linear-gradient($degradate 0%, $degradate 100%), url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+@mixin bg-gradient-host($position, $colora, $colorb, $img, $url) {
+  background-image: linear-gradient(
+      $position,
+      var.$color_black $colora,
+      var.$color_black $colorb,
+      transparent $img
+    ),
+    url('../img/page/' + $url);
+}

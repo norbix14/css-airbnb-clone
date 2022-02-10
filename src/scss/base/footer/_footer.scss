@@ -1,0 +1,80 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+$border-light: 0.1rem solid lighten(var.$color_gray, 40%);
+
+.footer {
+  border-top: $border-light;
+  background-color: lighten(var.$color_gray_light, 7%);
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(1, 2rem);
+    }
+    @include mx.media-desktop {
+      @include mx.grid(4, 2rem);
+    }
+  }
+  &__widget {
+    padding-bottom: 2rem;
+    border-bottom: $border-light;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    @include mx.media-desktop {
+      border-bottom: 0;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include mx.media-tablet {
+      flex-direction: row;
+    }
+    @include mx.media-desktop {
+      flex-direction: column;
+    }
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  &__link {
+    font-size: 1.4rem;
+    transition: all 0.2s ease;
+    color: var.$color_gray;
+    &--bar {
+      &::before {
+        content: '-';
+        margin-right: 0.5rem;
+      }
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+        &:hover {
+          text-decoration: none;
+          color: var.$color_primary;
+        }
+      }
+    }
+    &:hover {
+      text-decoration: underline;
+      color: var.$color_primary;
+    }
+  }
+  &__bar {
+    border-top: $border-light;
+    padding: 2rem 0;
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include mx.media-tablet {
+        flex-direction: row;
+      }
+    }
+  }
+}

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb</title>
+    <link
+      rel="shortcut icon"
+      href="./img/page/airbnb_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="root" id="root">
+      <header class="header">
+        <div class="container bar">
+          <div class="bar__logo">
+            <picture>
+              <source
+                srcset="./img/page/airbnb-logo-large.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/page/airbnb-logo-large.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="./img/page/airbnb-logo-large.png"
+                class="img"
+                alt="airbnb logo"
+              />
+            </picture>
+          </div>
+          <nav class="bar__nav">
+            <a class="bar__link" href="#">Lugares</a>
+            <a class="bar__link" href="#">Experiencias</a>
+            <a class="bar__link" href="#">Experiencias en línea</a>
+          </nav>
+          <nav class="bar__login">
+            <a class="bar__link" href="#">Sé anfitrión</a>
+          </nav>
+        </div>
+        <form class="container form" id="formSearch">
+          <div class="form__field">
+            <label for="location" class="form__label">Ubicación</label>
+            <input
+              class="form__input"
+              type="text"
+              name="location"
+              id="location"
+              placeholder="¿Dónde viajar?"
+              required
+            />
+          </div>
+          <div class="line-divisor"></div>
+          <div class="form__field">
+            <label for="checkin" class="form__label">Llegada</label>
+            <input
+              class="form__input"
+              type="date"
+              name="checkin"
+              id="checkin"
+              required
+            />
+          </div>
+          <div class="line-divisor"></div>
+          <div class="form__field">
+            <label for="checkout" class="form__label">Salida</label>
+            <input
+              class="form__input"
+              type="date"
+              name="checkout"
+              id="checkout"
+              required
+            />
+          </div>
+          <div class="line-divisor"></div>
+          <div class="form__field">
+            <label for="places" class="form__label">Huéspedes</label>
+            <input
+              class="form__input"
+              type="number"
+              name="places"
+              id="places"
+              placeholder="¿Personas?"
+              min="1"
+              required
+            />
+          </div>
+          <div class="line-divisor"></div>
+          <div class="form__field">
+            <button type="submit" class="form__submit">Buscar</button>
+          </div>
+        </form>
+        <div class="container header__search">
+          <p class="header__search-label">¿No sabes donde viajar?</p>
+          <a href="#" class="header__search-btn">Busqueda flexible</a>
+        </div>
+      </header>
+      <section class="section container destinations">
+        <h2 class="destinations__heading">Descubre alojamientos populares</h2>
+        <ul class="destinations__grid">
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_1.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_1.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_1.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">New York</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_2.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_2.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_2.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">París</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_3.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_3.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_3.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">San Francisco</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_4.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_4.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_4.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">Egipto</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_5.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_5.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_5.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">Londres</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_6.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_6.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_6.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">Italia</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_7.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_7.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_7.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">La India</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+          <li class="destiny">
+            <div class="destiny__image-container">
+              <picture>
+                <source
+                  srcset="./img/destiny/icono_destino_8.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/destiny/icono_destino_8.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/destiny/icono_destino_8.png"
+                  class="img"
+                  alt="destiny"
+                />
+              </picture>
+            </div>
+            <div class="destiny__info">
+              <h3 class="destiny__name">Grecia</h3>
+              <p class="destiny__distance">4 horas en avión</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="section container places">
+        <h2 class="places__heading">Vive en cualquier lugar del mundo</h2>
+        <div class="places__grid">
+          <div class="place">
+            <picture>
+              <source srcset="./img/live/vive_1.avif" type="image/avif" />
+              <source srcset="./img/live/vive_1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/live/vive_1.jpg"
+                class="place__img"
+                alt="place"
+              />
+            </picture>
+            <p class="place__name">Escapadas al aire libre</p>
+          </div>
+          <div class="place">
+            <picture>
+              <source srcset="./img/live/vive_2.avif" type="image/avif" />
+              <source srcset="./img/live/vive_2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/live/vive_2.jpg"
+                class="place__img"
+                alt="place"
+              />
+            </picture>
+            <p class="place__name">Alojamientos únicos</p>
+          </div>
+          <div class="place">
+            <picture>
+              <source srcset="./img/live/vive_3.avif" type="image/avif" />
+              <source srcset="./img/live/vive_3.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/live/vive_3.jpg"
+                class="place__img"
+                alt="place"
+              />
+            </picture>
+            <p class="place__name">Alojamientos enteros</p>
+          </div>
+          <div class="place">
+            <picture>
+              <source srcset="./img/live/vive_4.avif" type="image/avif" />
+              <source srcset="./img/live/vive_4.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/live/vive_4.jpg"
+                class="place__img"
+                alt="place"
+              />
+            </picture>
+            <p class="place__name">Alojamientos con tu mascota</p>
+          </div>
+        </div>
+      </section>
+      <section class="section container host">
+        <div class="host__content">
+          <h2 class="host__heading">Anímate a ser anfitrión</h2>
+          <p class="host__text">
+            Comparte tu espacio para ganar dinero extra y aprovechar nuevas
+            oportunidades
+          </p>
+          <a class="host__link" href="#">Más información</a>
+        </div>
+      </section>
+      <main class="main section container experiences">
+        <h2 class="experiences__heading">Descubre experiencias</h2>
+        <p class="experiences__description">
+          Actividades únicas con expertos locales, en persona o en línea.
+        </p>
+        <div class="experiences__grid">
+          <div class="experience">
+            <div class="experience__image-container">
+              <picture>
+                <source
+                  srcset="./img/experience/experiencia_1.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/experience/experiencia_1.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/experience/experiencia_1.jpg"
+                  class="img"
+                  alt="experience"
+                />
+              </picture>
+            </div>
+            <div class="experience__description">
+              <h3>Experiencias</h3>
+              <p>Actividades locales donde estés</p>
+            </div>
+          </div>
+          <div class="experience">
+            <div class="experience__image-container">
+              <picture>
+                <source
+                  srcset="./img/experience/experiencia_2.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/experience/experiencia_2.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/experience/experiencia_2.jpg"
+                  class="img"
+                  alt="experience"
+                />
+              </picture>
+            </div>
+            <div class="experience__description">
+              <h3>Experiencias</h3>
+              <p>Visita una ciudad y vive en ella</p>
+            </div>
+          </div>
+          <div class="experience">
+            <div class="experience__image-container">
+              <picture>
+                <source
+                  srcset="./img/experience/experiencia_3.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/experience/experiencia_3.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/experience/experiencia_3.jpg"
+                  class="img"
+                  alt="experience"
+                />
+              </picture>
+            </div>
+            <div class="experience__description">
+              <h3>Experiencias en línea</h3>
+              <p>Actividades interactivas en vivo</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container footer__grid">
+          <div class="footer__widget">
+            <h3 class="footer__heading">Ayuda</h3>
+            <nav class="footer__menu">
+              <a href="#" class="footer__link">Centro de ayuda</a>
+              <a href="#" class="footer__link">Información de seguridad</a>
+              <a href="#" class="footer__link">Opciones de cancelación</a>
+              <a href="#" class="footer__link"
+                >Nuestra respuesta frente al COVID-19</a
+              >
+              <a href="#" class="footer__link"
+                >Ayudá a gente con discapacidad</a
+              >
+              <a href="#" class="footer__link">¿Problemas en tu barrio?</a>
+            </nav>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__heading">Comunidad</h3>
+            <nav class="footer__menu">
+              <a href="#" class="footer__link">Airbnb.org para emergencias</a>
+              <a href="#" class="footer__link">Ayudá a refugiados afganos</a>
+              <a href="#" class="footer__link">Combatimos la discriminación</a>
+            </nav>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__heading">Cómo ser anfitrión</h3>
+            <nav class="footer__menu">
+              <a href="#" class="footer__link">Animate a ser anfitrión</a>
+              <a href="#" class="footer__link">AirCover para anfitriones</a>
+              <a href="#" class="footer__link">Recursos para anfitriones</a>
+              <a href="#" class="footer__link"
+                >Visitá el foro de la comunidad</a
+              >
+              <a href="#" class="footer__link">Ser un anfitrión responsable</a>
+            </nav>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__heading">Sobre Airbnb</h3>
+            <nav class="footer__menu">
+              <a href="#" class="footer__link">Noticias</a>
+              <a href="#" class="footer__link">Más sobre las funciones</a>
+              <a href="#" class="footer__link">Carta de nuestros fundadores</a>
+              <a href="#" class="footer__link">Empleo</a>
+              <a href="#" class="footer__link">Inversionistas</a>
+              <a href="#" class="footer__link">Airbnb Luxe</a>
+            </nav>
+          </div>
+        </div>
+        <div class="container footer__bar">
+          <nav class="footer__bar__nav">
+            <a href="#" class="footer__link footer__link--bar"
+              >&copy; 2022 Airbnb, Inc.</a
+            >
+            <a href="#" class="footer__link footer__link--bar">Privacidad</a>
+            <a href="#" class="footer__link footer__link--bar">Términos</a>
+            <a href="#" class="footer__link footer__link--bar"
+              >Mapa del sitio</a
+            >
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/imgsupport.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

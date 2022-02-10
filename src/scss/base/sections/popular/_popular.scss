@@ -1,0 +1,21 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.destinations {
+  &__grid {
+    @include mx.grid(1, 2rem);
+    @include mx.media-tablet {
+      @include mx.grid(2, 2rem);
+    }
+    @include mx.media-desktop {
+      @include mx.grid(4, 2rem);
+    }
+  }
+}
+
+.destiny {
+  @include mx.flex($justify: space-evenly);
+  &__image-container {
+    width: 14rem;
+  }
+}

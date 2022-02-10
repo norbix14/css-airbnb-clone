@@ -1,0 +1,19 @@
+@use 'media-queries' as mx;
+
+@mixin button($bgColor, $color) {
+  font-size: 2rem;
+  padding: 2rem 4rem;
+  border-radius: 3rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: $color;
+  background-color: $bgColor;
+  &:focus-visible {
+    outline: none;
+  }
+  @include mx.media-tablet {
+    display: inline-block;
+  }
+}
